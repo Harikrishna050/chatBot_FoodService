@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from fastapi import Request
 from fastapi.responses import JSONResponse
-from backend import db_helper, generic_helper
+import generic_helper
+import db_helper
 
 inprogress_orders = {}
 
