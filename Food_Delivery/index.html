@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Services in India</title>
+</head>
+<link rel="stylesheet" href="respons.css">
+<link rel="stylesheet" media="screen and (max-width:750px)" href="phone.css">
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="./assets/company-icons/Licious_Logo.png" alt="MyOnlineMeal.com" width="100px">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#services">Services</a></li>
+            <li class="item"><a href="#client-section">Contact Us</a></li>
+            <li class="item"><a href="#">Help</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to My Online Meal</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio temporibus ipsa a cupiditate vero nemo
+            tempore perspiciatis cum! In totam quas iste officia vitae non error, consectetur neque ullam illum.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem repudiandae, ab autem aut magni
+            voluptatem cupiditate sed minima molestiae non.</p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section id="services" class="cont">
+        <h2 class="h-primary center">Our Services</h2>
+        <div class="services">
+            <div class="box" id="pizza">
+                <img src="./assets/pizza.png" alt="">
+                <h3 class="h-secondary center">Food Catering</h3>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est obcaecati minima magnam
+                    deleniti iusto
+                    asperiores commodi itaque rem atque, eligendi nobis
+                    inventore facere nesciunt.</p>
+            </div>
+            <div class="box" id="bulk">
+                <img src="./assets/bpizza.png" alt="">
+                <h3 class="h-secondary center">Bulk Ordering</h3>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est obcaecati minima magnam
+                    deleniti iusto
+                    asperiores commodi itaque rem atque, eligendi nobis
+                    inventore facere nesciunt.</p>
+            </div>
+            <div class="box" id="boy">
+                <img src="./assets/boy.png" alt="">
+                <h3 class="h-secondary center">Food Ordering</h3>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est obcaecati minima magnam
+                    deleniti iusto
+                    asperiores commodi itaque rem atque, eligendi nobis
+                    inventore facere nesciunt.</p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="./assets/company-icons/aple.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="./assets/mic.webp" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="./assets/company-icons/Amazon-Logo.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="./assets/company-icons/skyp.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="./assets/company-icons/Oracle-Symbol.png" alt="Our Client">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="name">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="name">Phone Number: </label>
+                    <input type="number" name="phone" id="number" placeholder="Enter Your Phone Number">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+   <section class="chat-service">
+    <div class="chat-bot" id="chatBotContainer">
+        <i class="fas fa-square-xmark" id="closeIcon"></i>
+        <iframe width="350" height="430" allow="microphone;"
+            src="https://console.dialogflow.com/api-client/demo/embedded/889f5fc7-2ac2-4bbb-be4b-7ee5bf2e4866"></iframe>
+    </div>
+    <div class="active" id="toggleIcon">
+        <h2>chat with me!</h2>
+        <i class="fab fa-rocketchat"></i>
+    </div>
+   </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.myOnlineMeat.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+<script>
+    // JavaScript to toggle the visibility of the chat bot and hide the chat icon
+    document.querySelector('#toggleIcon').addEventListener('click', function () {
+        var chatBotContainer = document.querySelector('#chatBotContainer');
+        var chatIcon = document.querySelector('#toggleIcon');
+
+        // Toggle the visibility of the chat bot
+        chatBotContainer.style.display = (chatBotContainer.style.display === 'none' || chatBotContainer.style.display === '') ? 'block' : 'none';
+
+        // Hide the chat icon when the chat bot is displayed
+        chatIcon.style.display = (chatBotContainer.style.display === 'none' || chatBotContainer.style.display === '') ? 'block' : 'none';
+    });
+
+    // JavaScript to close the chat bot when the close icon is clicked
+    document.querySelector('#closeIcon').addEventListener('click', function () {
+        var chatBotContainer = document.querySelector('#chatBotContainer');
+        var chatIcon = document.querySelector('#toggleIcon');
+
+        // Close the chat bot
+        chatBotContainer.style.display = 'none';
+
+        // Show the chat icon when the chat bot is closed
+        chatIcon.style.display = 'block';
+    });
+</script>
+<script src="https://kit.fontawesome.com/d3d369f9f1.js" crossorigin="anonymous"></script>
+
+</html>
